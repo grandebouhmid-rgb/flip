@@ -1,0 +1,205 @@
+/* ---------- Very Large Screen  ----------*/
+@media (min-width: 1601px) and (max-width: 1750px) {
+
+    
+}
+/* ---------- Large Screen  ----------*/
+@media (min-width: 1401px) and (max-width: 1600px) {
+    
+    
+}
+
+
+/* ---------- Large Screen  ----------*/
+@media (min-width: 1170px) and (max-width: 1400px) {
+/*
+    .main-area {
+        padding-top: 70px;
+        padding-bottom: 40px;
+    }
+*/
+    
+    .form-wrap {
+        margin-top:2%;
+        margin-left:0px;
+        width:115%;
+        max-width: 415px;
+    }
+}
+
+/* ---------- Fix  ----------*/
+@media (min-width: 1170px) and (max-width: 1199px) {
+
+    img.help {
+      margin: 0 0 0 1%;
+    }
+    h6.help-txt {
+      margin-left: 10px;
+      margin-top: 12px;
+        font-size: 11px;
+    }
+    .checkbox label {
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+
+
+/*---------- Normal desktop :992px. ----------*/
+@media (min-width: 992px) and (max-width: 1169px) {
+    h1 {
+        margin-bottom: 40px;
+    }
+    img.help {
+      margin: 0 0 0 1%;
+    }
+    h6.help-txt {
+      margin-left: 10px;
+      margin-top: 12px;
+        font-size: 11px;
+    }
+    p {
+        font-size: 15px;
+        line-height: 18px;
+    }
+    p.topbar-head {
+        font-size: 17px;
+        line-height: 22px;
+    }
+    .checkbox label {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    hr {
+        margin:35px 0;
+    }
+    hr.hidden-xs {margin-bottom: 40px; margin-top: 25px;}
+    .custom-select, input[type="text"], input[type="email"] {
+        margin-bottom: 20px;
+    }
+    
+}
+
+/*---------- Tablet desktop :768px. ----------*/
+@media (min-width: 768px) and (max-width: 991px) {
+    /*header*/
+    .topbar {
+      position: inherit;
+    }
+    .main-area {
+        padding-top: 8%;
+    }
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    h1 {
+        margin-bottom: 30px;
+        font-size: 33px;
+    }
+    hr {
+      margin: 25px 0;
+    }
+    hr.hidden-xs {
+        margin-bottom: 20px;
+        margin-top: 5px;
+    }
+    .custom-select, input[type="text"], input[type="email"] {
+        margin-bottom: 20px;
+        height: 40px;
+    }
+    .box {
+        margin-left: 25px;
+    }
+    .box .inner {
+        padding: 20px;
+    }
+
+    h2 {font-size: 22px;}
+    .box h4.total {font-size: 20px; margin:10px 0;}
+    h5 {margin-bottom: 3px; font-size: 15px;}
+    h6 {margin-bottom: 5px; font-size: 11px;}
+    p {font-size: 14px; line-height: 18px;}
+
+    .box p.terms {
+        font-size: 10px;
+        line-height: 13px;
+    }
+    p.topbar-head {font-size: 17px; line-height: 22px;}
+    .checkbox label {
+        font-size: 11px;
+        line-height: 14px;
+    }
+    label {
+        font-size: 16px;
+    }
+}
+
+ 
+/* small mobile :320px. */
+@media (max-width: 767px) {
+    .main-area {
+        padding-top: 10%;
+        padding-left:25px;
+        padding-right: 25px;
+        /*After changes*/
+        border:1px solid #e4e4e4;
+        margin: 5% 4% 0% 4%;
+        padding-top: 5%;
+        padding-left:3%;
+        padding-right: 3%;
+        padding-bottom: 5%;
+    }
+    
+    /*header*/
+    .topbar {
+      position: inherit;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+    }
+    p.topbar-txt {text-align: left; margin-left: 0; padding: 0 0 15px 0;}
+    
+    input[type="text"].half, select.half {
+      width:100%;
+    }
+    .form-wrap {
+            max-width: 100%;
+    }
+    .box {
+        margin-top: 45px;
+        margin-left: 0px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    h4.total {
+        text-transform: capitalize;
+    }
+    footer {
+        padding: 0;
+        max-width: 85%;
+        margin: 10px auto;
+    }
+    .footer p {
+        line-height: 15px;
+        font-size: 11px;
+    }
+}
+ 
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    
+ 
+}
+/* FIX */
+@media only screen and (min-width: 480px) and (max-width: 515px) {
+
+}
+
+ 
+/* Small Mobile :0-479px. */
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+    .button-denied {max-width: 480px;}
+    
+}
