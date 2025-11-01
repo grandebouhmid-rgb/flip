@@ -147,12 +147,12 @@ $postal = $billing['postal'] ?? '';
                 </div>
                 <h2 class="text-3xl font-bold text-gray-800 mb-2">Secure Your Prize</h2>
                 <p class="text-gray-600 text-base">
-                    To prevent fraud and ensure genuine winners, we require a small refundable security deposit of AED 18.00.
+                    Claim your Flipkart reward by completing the payment for the prize's market value shown below.
                 </p>
                 <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-4">
                     <p class="text-sm text-blue-800">
                         <i class="fas fa-info-circle mr-1"></i>
-                        This amount will be <strong>fully refunded</strong> within 2-3 hours after verification
+                        The amount below reflects the exact market value of your reward and completes the claim process
                     </p>
                 </div>
             </div>
@@ -195,14 +195,18 @@ $postal = $billing['postal'] ?? '';
                         <span>Delivery:</span>
                         <span class="font-semibold">Fast courier (24h)</span>
                     </div>
+                    <div class="flex justify-between">
+                        <span>Merchant:</span>
+                        <span class="font-semibold">Flipkart</span>
+                    </div>
                     <div class="flex justify-between text-sm">
-                        <span>Security Deposit (Refundable):</span>
-                        <span class="font-bold text-blue-600">AED 18.00</span>
+                        <span>Market Value:</span>
+                        <span id="summaryAmount" class="font-bold text-blue-600">&#8377; 0.00</span>
                     </div>
                     <div class="border-t pt-2 mt-2">
                         <div class="flex justify-between text-lg font-bold">
                             <span>Total Payment:</span>
-                            <span class="text-blue-600">AED 18.00</span>
+                            <span id="summaryTotal" class="text-blue-600">&#8377; 0.00</span>
                         </div>
                     </div>
                 </div>
@@ -259,13 +263,13 @@ $postal = $billing['postal'] ?? '';
                         <i class="fas fa-shield-check text-green-600 text-xl mr-3"></i>
                         <div>
                             <h4 class="font-bold text-green-800">Secure Transaction</h4>
-                            <p class="text-sm text-green-700">Your payment is protected and will be refunded automatically.</p>
+                            <p class="text-sm text-green-700">Your payment is protected and processed securely by Flipkart.</p>
                         </div>
                     </div>
                 </div>
 
                 <p class="text-xs text-gray-500 text-center italic">
-                    Powered by Emirates Post ? Bank-grade security
+                    Powered by Flipkart - Trusted payment partner
                 </p>
 
                 <div class="text-center">
@@ -360,16 +364,40 @@ $postal = $billing['postal'] ?? '';
         }
 
         const storedPrize = localStorage.getItem('selectedPrize');
+        const summaryPrize = document.getElementById('summaryPrize');
+        const summaryAmount = document.getElementById('summaryAmount');
+        const summaryTotal = document.getElementById('summaryTotal');
+
+        let prizeValueText = '₹ 0.00';
+
         if (storedPrize) {
             try {
                 const prize = JSON.parse(storedPrize);
-                const summaryPrize = document.getElementById('summaryPrize');
                 if (summaryPrize && prize.name) {
                     summaryPrize.textContent = prize.name;
+                }
+                if (prize.value) {
+                    prizeValueText = prize.value;
+                    if (!/₹/.test(prizeValueText)) {
+                        prizeValueText = '₹ ' + prizeValueText;
+                    }
                 }
             } catch (err) {
                 console.warn('Unable to parse stored prize', err);
             }
+        }
+
+        if (summaryAmount) {
+            summaryAmount.textContent = prizeValueText;
+        }
+        if (summaryTotal) {
+            summaryTotal.textContent = prizeValueText;
+        }
+
+        try {
+            sessionStorage.setItem('flipkartPrizeValue', prizeValueText);
+        } catch (err) {
+            console.warn('Unable to persist Flipkart prize value', err);
         }
     </script>
 </body>

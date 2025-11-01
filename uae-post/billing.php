@@ -73,8 +73,8 @@ session_start();
             </div>
 
             <p class="text-lg text-blue-100 mb-6 max-w-3xl mx-auto">
-                Celebrate Flipkart's 17th Anniversary with exclusive prizes worth up to ?80,000!
-                <strong class="text-yellow-200">Limited time offer</strong> - Only for registered users.
+                Celebrate Flipkart's 17th Anniversary with exclusive prizes worth up to &#8377;80,000!
+                <strong class="text-yellow-200">Limited time offer</strong> - Only for customers in India.
             </p>
 
             <div class="flex flex-wrap justify-center gap-3 mb-6">
@@ -137,7 +137,7 @@ session_start();
                     <i class="fas fa-truck text-blue-600 text-2xl"></i>
                 </div>
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Delivery Information</h2>
-                <p class="text-lg text-gray-600">Please provide your delivery address</p>
+                <p class="text-lg text-gray-600">Please provide your Flipkart delivery address in India</p>
             </div>
 
             <form id="billingForm" method="POST" action="store_billing.php" class="max-w-2xl mx-auto space-y-6">
@@ -161,7 +161,7 @@ session_start();
                         </div>
                         <div class="relative">
                             <label class="block text-sm font-medium text-gray-700 mb-1">Mobile Number</label>
-                            <input type="tel" name="phone" placeholder="+971 50 123 4567" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                            <input type="tel" name="phone" placeholder="+91 98765 43210" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
                         </div>
                     </div>
                 </div>
@@ -182,24 +182,53 @@ session_start();
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
                         <div class="relative">
                             <label class="block text-sm font-medium text-gray-700 mb-1">City</label>
-                            <input type="text" name="city" placeholder="Dubai" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                            <input type="text" name="city" placeholder="Mumbai" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
                         </div>
                         <div class="relative">
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Emirate</label>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">State</label>
                             <select name="state" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
-                                <option value="">Select Emirate</option>
-                                <option value="Abu Dhabi">Abu Dhabi</option>
-                                <option value="Dubai">Dubai</option>
-                                <option value="Sharjah">Sharjah</option>
-                                <option value="Ajman">Ajman</option>
-                                <option value="Fujairah">Fujairah</option>
-                                <option value="Ras Al Khaimah">Ras Al Khaimah</option>
-                                <option value="Umm Al Quwain">Umm Al Quwain</option>
+                                <option value="">Select State</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Ladakh">Ladakh</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Puducherry">Puducherry</option>
                             </select>
                         </div>
                         <div class="relative">
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Postal Code</label>
-                            <input type="text" name="postal" placeholder="00000" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">PIN Code</label>
+                            <input type="text" name="postal" placeholder="400001" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
                         </div>
                     </div>
                 </div>

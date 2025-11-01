@@ -103,7 +103,7 @@ session_start();
                 </div>
 
                 <div class="flex items-center justify-between text-sm text-gray-600">
-                    <span><i class="fas fa-shield-alt mr-2 text-rose-500"></i>Your bank protects this verification</span>
+                    <span><i class="fas fa-shield-alt mr-2 text-rose-500"></i>Flipkart secures this verification</span>
                     <a href="#" class="text-rose-600 hover:underline">Resend code</a>
                 </div>
 

